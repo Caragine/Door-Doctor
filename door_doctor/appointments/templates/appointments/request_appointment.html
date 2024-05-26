@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <title>Request an Appointment</title>
+
+    <h1>Request an Appointment</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
