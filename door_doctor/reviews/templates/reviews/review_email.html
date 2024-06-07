@@ -13,5 +13,8 @@
     <p><strong>ZIP Code:</strong> {{ zip_code }}</p>
     <p><strong>Phone Number:</strong> {{ phone_number }}</p>
     <p><strong>Review Text:</strong> {{ review_text }}</p>
+    <a href="http://localhost:8000/reviews/approve/{{token}}">Approve Review</a>
+    <a href="{% url 'reviews:approve_review' token=token %}">Approve Review</a>
+    
 </body>
 </html>

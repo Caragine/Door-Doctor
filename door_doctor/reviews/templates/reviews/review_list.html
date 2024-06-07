@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Customer Reviews</h1>
+
+<h1>Customer Testimonials</h1>
+<a href="{% url 'reviews:submit_review' %}">Happy with our service? Please share your experience with us!</a>
 {% for review in reviews %}
-    <p><strong>{{ review.customer_name }}</strong></p>
-    <p>{{ review.review_text }}</p>
+    <div class="rev">
+    <h3>{{ review.name }}</h3>
+    <h6>{{ review.city }}, {{review.state}} </h6>
+    <h4>{{ review.review_text }}</h4>
     <p>{{ review.created_at }}</p>
-{% endfor %}
+    </div>
+{% endfor %}  
 {% endblock %}
+
+

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Submit a Review</h1>
+<h5>Please fill out this form to submit a review of our service. We greatly appreciate your business and your satisfaction is our priority!</h5>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}

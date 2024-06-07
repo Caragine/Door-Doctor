@@ -7,6 +7,7 @@
     <title>Door Doctor</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
     
 
     <link rel="stylesheet" href="{% static 'css/master.css'%}">
@@ -17,18 +18,38 @@
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" role="navigation" id="navbar">
         <div class="container">
             <div class="navbar-nav align-items-center">
-                <a class="navbar-brand" href="{% url 'home' %}">Door Doctor</a>
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'images/dd2.png' %}" width="10%" height="10%" alt="" class="d-inline-block align-text-top">
+                Door Doctor
+                </a>
             </div>
-        <div class="navbar-nav ml-auto">
-            <a class='nav-item nav-link' href="{% url 'reviews:submit_review' %}" class="btn btn-simple">Submit Review</a>
-            <a class='nav-item nav-link' href="{% url 'appointments:request_appointment' %}" class="btn btn-simple">Request Appointment</a>
-            <a class='nav-item nav-link' href="{% url 'reviews:review_list' %}" class="btn btn-simple">Customer Testimonies</a>
-        </div>    
+            <div class="navbar-nav ml-auto">  
+                <a class='nav-item nav-link' href="#" class="btn btn-simple">About Us</a>
+                <a class='nav-item nav-link' href="#" class="btn btn-simple">Gallery</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Openers</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>  
+                <a class='nav-item nav-link' href="{% url 'reviews:review_list' %}" class="btn btn-simple">Customer Testimonials</a>
+                <a class='nav-item nav-link' href="{% url 'appointments:request_appointment' %}" class="btn btn-simple">Request Appointment</a>
+            </div>   
+             
         </div>
     </nav>
-    {% block content %}
 
+    {% block content %}
     {% endblock %}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

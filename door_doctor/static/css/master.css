@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+    color: cyan;
+}
+
+h5 {
+    text-align: center;
+}
+
+body {
+    background-color: rgb(112, 112, 112);
+    color: white;
+}
+
+h2 {
+    color: cyan
+}
+
+.rev {
+    color: cyan;
+    padding: 1%
+}
+
+.nav-item {
+    padding-right: 10px;
+
+}
+
+p {
+    color: cyan;
+}

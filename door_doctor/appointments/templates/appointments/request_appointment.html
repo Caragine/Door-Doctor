@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-    <title>Request an Appointment</title>
-
+</style>
     <h1>Request an Appointment</h1>
+    <h5>Please fill out this form to request an appointment. We will be sure to contact you as soon as possible to schedule a service appointment.</h5>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
