@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Door Doctor</title>
 
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/dd2.png' %}" width="64px" height="64px">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
     
@@ -15,7 +17,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" role="navigation" id="navbar">
+    <nav class="navbar navbar-custom navbar-expand-lg" data-bs-theme="dark" role="navigation" id="navbar">
         <div class="container">
             <div class="navbar-nav align-items-center">
             <a class="navbar-brand" href="{% url 'home' %}">
@@ -32,7 +34,10 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Openers</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Garage Doors</a>
+                        <a class="dropdown-item" href="#">Springs</a>
+                        <a class="dropdown-item" href="#">Cables</a>
+                        <a class="dropdown-item" href="#">Pulleys</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>

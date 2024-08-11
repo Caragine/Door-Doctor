@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-</style>
+<div class="container">
     <h1>Request an Appointment</h1>
     <h5>Please fill out this form to request an appointment. We will be sure to contact you as soon as possible to schedule a service appointment.</h5>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Submit</button>
+        <div class="form-group">{{ form.as_p }}</div>
+        <input class="btn btn-primary" type="submit" value="Submit">
     </form>
+</div>
 {% endblock %}

@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="container">
 <h1>Submit a Review</h1>
 <h5>Please fill out this form to submit a review of our service. We greatly appreciate your business and your satisfaction is our priority!</h5>
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
+    <div class="form-group">{{ form.as_p }}</div>
+    <input class="btn btn-primary" type="submit" value="Submit">
 </form>
+</div>
 {% endblock %}

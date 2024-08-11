@@ -2,15 +2,12 @@
 {% block content %}
 
 <h1>Customer Testimonials</h1>
-<a href="{% url 'reviews:submit_review' %}">Happy with our service? Please share your experience with us!</a>
+<h5>Happy with our service? Please share your experience with us!</h5>
+<h5><a href="{% url 'reviews:submit_review' %}" class="btn btn-primary">Submit Review</a></h5>
 {% for review in reviews %}
     <div class="rev">
-    <h3>{{ review.name }}</h3>
-    <h6>{{ review.city }}, {{review.state}} </h6>
     <h4>{{ review.review_text }}</h4>
-    <p>{{ review.created_at }}</p>
+    <p>{{ review.name }} - {{ review.city }}, {{review.state}} - {{ review.created_at }}</p>
     </div>
 {% endfor %}  
 {% endblock %}
-
-
