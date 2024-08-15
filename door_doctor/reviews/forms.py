@@ -11,7 +11,7 @@ class ReviewForm(forms.ModelForm):
                    'city': forms.TextInput(attrs={'class': "form-control", 'placeholder': 'City'}), 
                    'zip_code': forms.TextInput(attrs={'class': "form-control", 'placeholder': '#####'}), 
                    'phone_number': forms.TextInput(attrs={'class': "form-control", 'placeholder': '##########'}),
-                   'review_text': forms.Textarea(attrs={'class': "form-control"})}
+                   'review_text': forms.Textarea(attrs={'class': "form-control", 'placeholder': 'Tell us about your experience!'})}
 
     def clean(self):
         form_data = self.cleaned_data

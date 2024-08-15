@@ -22,4 +22,9 @@ urlpatterns = [
     path('', views.HomePage.as_view(), name='home'),
     path('reviews/', include('reviews.urls', namespace='reviews')),
     path('appointments/', include('appointments.urls', namespace='appointments')),
+    path('about_us/', views.AboutUs.as_view(), name='about'),
+    path('gallery/', views.Gallery.as_view(), name='gallery'),
+    path('services/', views.Services.as_view(), name='services'),
+    path('faq/', views.FAQ.as_view(), name='faq'),
+    path('contact/', views.contact.as_view(), name='contact')
 ]
