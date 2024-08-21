@@ -41,7 +41,7 @@ SECRET_KEY = 'django-insecure-@bzn6ljf)4kqy%xfsyf742=@yk4pdi#+s*)!uonkf34y#ef82o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['DoorDoctorTest.pythonanywhere.com']
 
 
 # Application definition

@@ -1,0 +1,107 @@
+h1 {
+    text-align: center;
+    color: #275ca0;
+}
+
+h5 {
+    text-align: center;
+    color: #275ca0;
+}
+
+body {
+    background-color: white;
+}
+
+h2 {
+    color: #275ca0
+}
+
+.rev {
+    color: #275ca0;
+    padding: 1%
+}
+
+.nav-item {
+    padding-right: 10px;
+}
+
+.serv, .about {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    color: #275ca0;
+}
+
+.nav-item {
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
+
+.btn-primary {
+    background-color: #275ca0;
+}
+
+.submitreview {
+    color:#275ca0;
+}
+
+.form-group {
+    font-weight: bold; 
+    color: #275ca0;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h2 {
+    color: #275ca0;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.faq-item p {
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.container2 {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container3 {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container3 h2, h3 {
+    color: #275ca0;
+}
+
+.container3 p {
+    color: #333;
+    font-weight: bold;
+}
+
+.container4 {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
