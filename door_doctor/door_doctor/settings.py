@@ -29,6 +29,7 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 
+# SITE_URL = 'http://127.0.0.1:8000'
 SITE_URL = 'https://www.nydoordoctor.com'
 
 # Quick-start development settings - unsuitable for production
@@ -38,9 +39,9 @@ SITE_URL = 'https://www.nydoordoctor.com'
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['DoorDoctorTest.pythonanywhere.com', 'www.nydoordoctor.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'DoorDoctorTest.pythonanywhere.com', 'www.nydoordoctor.com']
 
 
 # Application definition

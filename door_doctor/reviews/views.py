@@ -27,7 +27,7 @@ def submit_review(request):
 
 def send_review_email(review):
 
-    approve_url = reverse('approve_review', kwargs={'token': token})
+    approve_url = reverse('reviews:approve_review', kwargs={'token': review.token})
     full_url = f"{settings.SITE_URL}{approve_url}"
 
     context = {
@@ -38,7 +38,8 @@ def send_review_email(review):
                 'zip_code': review.zip_code,
                 'phone_number': review.phone_number,
                 'review_text': review.review_text,
-                'approve_url': full_url
+                'token': review.token,
+                'approve_url': full_url,
             }
     
     send_mail('New Review Submitted', 'A new review has been submitted.', os.getenv('EMAIL_HOST_USER'),
