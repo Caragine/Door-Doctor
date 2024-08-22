@@ -26,6 +26,10 @@ def submit_review(request):
     return render(request, 'reviews/submit_review.html', {'form': form})
 
 def send_review_email(review):
+
+    approve_url = reverse('approve_review', kwargs={'token': token})
+    full_url = f"{settings.SITE_URL}{approve_url}"
+
     context = {
                 'name': review.name,
                 'street': review.street,
@@ -39,7 +43,7 @@ def send_review_email(review):
     
     send_mail('New Review Submitted', 'A new review has been submitted.', os.getenv('EMAIL_HOST_USER'),
             ['adam.caragine@hotmail.com'],
-            html_message=render_to_string('reviews/review_email.html', context))
+            html_message=render_to_string('reviews/review_email.html', context), fail_silently=False,)
 
 def approve_review(request, token):
     review = get_object_or_404(Review, token=token)
