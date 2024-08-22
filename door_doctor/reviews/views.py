@@ -38,7 +38,7 @@ def send_review_email(review):
                 'zip_code': review.zip_code,
                 'phone_number': review.phone_number,
                 'review_text': review.review_text,
-                'token': review.token,
+                'approve_url': full_url
             }
     
     send_mail('New Review Submitted', 'A new review has been submitted.', os.getenv('EMAIL_HOST_USER'),
