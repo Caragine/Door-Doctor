@@ -16,7 +16,7 @@ def request_appointment(request):
             'New Appointment Request',
             'A new appointment request has been submitted.',
             os.getenv('EMAIL_HOST_USER'),
-            ['adam.caragine@hotmail.com'],
+            ['nydoordoctor@hotmail.com'],
             html_message=render_to_string('appointment_email.html', context = {
                 'name': appointment.name,
                 'street': appointment.street,

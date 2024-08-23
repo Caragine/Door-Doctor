@@ -43,7 +43,7 @@ def send_review_email(review):
             }
     
     send_mail('New Review Submitted', 'A new review has been submitted.', os.getenv('EMAIL_HOST_USER'),
-            ['adam.caragine@hotmail.com'],
+            ['nydoordoctor@hotmail.com'],
             html_message=render_to_string('reviews/review_email.html', context), fail_silently=False,)
 
 def approve_review(request, token):
