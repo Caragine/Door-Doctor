@@ -54,7 +54,21 @@ def approve_review(request, token):
 
 def review_list(request):
     reviews = Review.objects.filter(approved=True)
-    return render(request, 'reviews/review_list.html', {'reviews': reviews})
+    processed_reviews = []
+
+    for review in reviews:
+        full_name = review.name
+        name_parts = full_name.split()
+        first_name = name_parts[0]
+        last_initial = name_parts[1][0] if len(name_parts) > 1 else ''
+        processed_reviews.append({'first_name': first_name, 
+                                'last_initial': last_initial,
+                                'city': review.city,
+                                'state': review.state,
+                                'review_text': review.review_text,
+                                'created_at': review.created_at})
+
+    return render(request, 'reviews/review_list.html', {'reviews': processed_reviews})
 
 def thank_you(request):
     return render(request, 'reviews/thank_you.html')

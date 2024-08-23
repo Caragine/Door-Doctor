@@ -7,13 +7,7 @@
 {% for review in reviews %}
     <div class="rev">
     <h4>{{ review.review_text }}</h4>
-        {% with review.name|split:" " as name_parts %}
-            {{% if name_parts|length > 1 %}}
-                <p>{{ name_parts.0 }} {{ name_parts.1|slice:":1"}} - {{ review.city }}, {{review.state}} - {{ review.created_at }}</p>
-            {% else %}
-            <p>{{ review.name }} - {{ review.city }}, {{review.state}} - {{ review.created_at }}</p>
-            {% end if %}
-        {% endwith %}
+    <p>{{ review.first_name }} {{ review.last_initial }}. - {{ review.city }}, {{review.state}} - {{ review.created_at }}</p>
     </div>
 {% endfor %}  
 {% endblock %}
