@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
 <h1>Customer Testimonials</h1>
 <h5>Happy with our service? Please share your experience with us!</h5>
@@ -9,5 +10,5 @@
     <h4>{{ review.review_text }}</h4>
     <p>{{ review.first_name }} {{ review.last_initial }}. - {{ review.city }}, {{review.state}} - {{ review.created_at }}</p>
     </div>
-{% endfor %}  
+{% endfor %}
 {% endblock %}
